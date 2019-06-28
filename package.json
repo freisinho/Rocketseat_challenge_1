@@ -1,0 +1,8 @@
+{
+  "name": "Rocketseat_challenge_1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:freisinho/Rocketseat_challenge_1.git",
+  "author": "<caina@webgoal.com.br>",
+  "license": "MIT"
+}
