@@ -69,4 +69,19 @@ server.delete("/projects/:id", checkIfExistProject, (req, res) => {
 });
 
 
+server.put("/projects/:id", checkIfExistProject, (req, res) => {
+  const { id: index } = req.params;
+  const { id, title, tasks } = req.body;
+
+  const project = projects.find(project => {
+    if (project.id === parseInt(index)) return project;
+  });
+
+  project.id = id;
+  project.title = title;
+  project.tasks = tasks;
+
+  return res.json(projects);
+});
+
 server.listen(6666);
