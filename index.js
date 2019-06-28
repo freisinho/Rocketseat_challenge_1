@@ -18,4 +18,14 @@ server.get("/projects", (req, res) => {
   return res.json(projects);
 });
 
+server.get("/projects/:id", (req, res) => {
+  const { id } = req.params;
+
+  const project = projects.find(project => {
+    if (project.id === parseInt(id)) return project;
+  });
+
+  return res.json(project);
+});
+
 server.listen(6666);
