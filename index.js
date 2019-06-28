@@ -14,8 +14,6 @@ server.use((req, res, next) => {
   return next();
 });
 
-
-
 function checkIfExistProject(req, res, next) {
   const { id } = req.params;
 
