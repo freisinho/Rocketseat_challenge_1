@@ -5,7 +5,12 @@
   "repository": "git@github.com:freisinho/Rocketseat_challenge_1.git",
   "author": "<caina@webgoal.com.br>",
   "license": "MIT",
+    "scripts":{"dev": "nodemon index.js"},
+
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
