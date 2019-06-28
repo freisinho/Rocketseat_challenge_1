@@ -44,6 +44,18 @@ server.get("/projects/:id",checkIfExistProject, (req, res) => {
   return res.json(project);
 });
 
+server.post("/projects/:id/tasks", checkIfExistProject, (req, res) => {
+  const { id } = req.params;
+  const { title } = req.body;
+
+  const project = projects.find(project => {
+    if (project.id === parseInt(id)) return project;
+  });
+
+  project.tasks.push(title);
+
+  return res.json(projects);
+});
 
 
 server.listen(6666);
