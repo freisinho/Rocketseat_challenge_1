@@ -58,4 +58,15 @@ server.post("/projects/:id/tasks", checkIfExistProject, (req, res) => {
 });
 
 
+server.delete("/projects/:id", checkIfExistProject, (req, res) => {
+  const { id } = req.params;
+
+  projects = projects.filter(function(project) {
+    return project.id !== parseInt(id);
+  });
+
+  return res.json(projects);
+});
+
+
 server.listen(6666);
