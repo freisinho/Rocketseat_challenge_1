@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:freisinho/Rocketseat_challenge_1.git",
   "author": "<caina@webgoal.com.br>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
