@@ -6,6 +6,14 @@ server.use(express.json());
 
 const projects=[];
 
+let requests =0;
+
+server.use((req, res, next) => {
+  requests++;
+  console.log(`Request number: ${requests}`);
+  return next();
+});
+
 
 
 function checkIfExistProject(req, res, next) {
